@@ -1,0 +1,22 @@
+* {color:#000 !important}
+
+body {background:#fff}
+
+a {text-decoration:none}
+
+.header-menu,
+.header-phone-text,
+.header-callback-link,
+.slider-link,
+.slider-ctrl,
+.content-tabs ul li,
+.social-vk,
+.tour-anonce-buy,
+.tours-more,
+.footer-menu,
+.footer-links,
+.content form,
+.news-detail-likes,
+.window {display:none}
+
+.content-tabs ul li.active {display:block}

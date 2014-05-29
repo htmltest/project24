@@ -1,0 +1,43 @@
+<div class="content">
+    <h1>Заказать звонок</h1>
+    <p>С октября 2011 года в сети Интернет стартовал проект «Город без барьеров». На сайте pandus.molparlam.ru размещается альтернативная электронная карта Москвы. От других ее отличает социальная направленность, поскольку предназначена она  для лиц с ограниченными возможностями здоровья.</p>
+    <form action="windows/success.html" method="post">
+        <div class="window-form-row">
+            <div class="form-label">Ваше имя<span>*</span></div>
+            <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">Ваш телефон<span>*</span></div>
+            <div class="form-input"><input type="text" name="phone" value="" class="required" /></div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">Страна и город<span>*</span></div>
+            <div class="form-select">
+                <select name="country" data-placeholder="Выберите страну">
+                    <option value=""></option>
+                    <option value="1">Россия</option>
+                    <option value="2">Украина</option>
+                    <option value="3">Латвия</option>
+                    <option value="4">США</option>
+                    <option value="5">Франция</option>
+                    <option value="6">Германия</option>
+                    <option value="7">Англия</option>
+                </select>
+            </div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">Комментарии<span>*</span></div>
+            <div class="form-input"><textarea name="text" rows="5" cols="10" class="required"></textarea></div>
+        </div>
+        <div class="form-submit">
+            <input type="submit" value="Отправить" />
+        </div>
+    </form>
+    <div class="loading">
+        <div class="loading-bg"></div>
+        <div class="loading-inner">
+            <div class="loading-img"></div>
+            <div class="loading-text">Отправка данных</div>
+        </div>
+    </div>
+</div>
