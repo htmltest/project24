@@ -231,7 +231,7 @@ var sliderTimer     = null;
         });
 
         // заказ тура
-        $('.tour-header a').click(function(e) {
+        $('.wrapper').on('click', '.tour-header a, .tour-anonce-buy a', function(e) {
             $.ajax({
                 url: $(this).attr('href'),
                 dataType: 'html',
@@ -350,6 +350,19 @@ var sliderTimer     = null;
             if ($(e.target).parents().filter('.tour-inner-list').length == 0) {
                 $('.tour-inner-list-item.active').removeClass('active');
             }
+        });
+
+        // полоса "наверх"
+        $(document).mousemove(function(e) {
+            if (e.pageX > $(window).width() - 90) {
+                $('.up').show();
+            } else {
+                $('.up').hide();
+            }
+        });
+
+        $('.up').click(function() {
+            $.scrollTo(0, 500);
         });
 
     });
