@@ -184,11 +184,12 @@ var sliderTimer     = null;
         // галерея фото
         $('.gallery-preview a').click(function(e) {
             var curLink = $(this);
+            var curGallery = curLink.parents().filter('.gallery');
 
             if (!curLink.hasClass('active')) {
-                $('.gallery-preview a.active').removeClass('active');
+                curGallery.find('.gallery-preview a.active').removeClass('active');
                 curLink.addClass('active');
-                $('.gallery-big img').attr('src', curLink.attr('href'));
+                curGallery.find('.gallery-big img').attr('src', curLink.attr('href'));
             }
 
             e.preventDefault();
@@ -363,6 +364,13 @@ var sliderTimer     = null;
 
         $('.up').click(function() {
             $.scrollTo(0, 500);
+        });
+
+        // корабли
+        $('.ship-menu ul li a').click(function(e) {
+            var curIndex = $('.ship-menu ul li a').index($(this));
+            $.scrollTo($('.ship').eq(curIndex), {offset: {'top': -150}, duration: 500});
+            e.preventDefault();
         });
 
     });
