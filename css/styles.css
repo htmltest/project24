@@ -123,14 +123,15 @@ header {height:241px; position:relative}
 .content h2 {font-size:24px; line-height:24px; margin:48px 0 18px 0; padding:0}
 .content h1+h2,
 .content h2:first-child {margin-top:9px}
-.content h3 {font-size:18px; line-height:18px; margin:54px 0 18px 0; padding:0}
+.content h3 {font-size:18px; line-height:18px; margin:54px 0 18px 0; padding:0; color:#ff8f00}
 .content h2+h3 {margin-top:18px}
-.content img+h3 {margin-top:18px}
+.content img+h3 {margin-top:18px; color:#000}
 .content h3:first-child {margin-top:18px}
 .content h4 {font-size:14px; line-height:18px; margin:36px 0 18px 0; padding:0}
 .content h3+h4 {margin-top:18px}
 .content p {margin:18px 0}
 .content blockquote {font-size:16px; line-height:18px; background:#fff464; padding:17px 20px 19px 20px; margin:18px 0}
+.content blockquote h3 {color:#000}
 .content hr {margin:28px 0 18px 0; padding:0; height:1px; background:#ccc; border:none; position:relative; overflow:hidden}
 .content ul {margin:18px 0 18px 6px; padding:0; list-style:none}
 .content ul li {margin:0 0 6px 0; padding:0 0 0 12px; background:url(../images/li.png) no-repeat left 6px}
@@ -256,7 +257,7 @@ header {height:241px; position:relative}
 .contacts-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .contacts-col {float:left; width:260px; padding:0 0 0 60px}
 .contacts-col:first-child {padding:0}
-.contacts-col h3 {margin:0 0 2px 0; color:#ff8f00}
+.contacts-col h3 {margin:0 0 2px 0}
 .contacts-col p {margin:0}
 
 .contacts-map {height:459px; margin:34px 0 0 0}
@@ -341,7 +342,7 @@ header {height:241px; position:relative}
 .tour-inner blockquote {font-size:14px}
 .tour-inner-left {float:left; width:580px}
 .tour-inner-right {float:right; width:260px; padding:0 20px 36px 20px; background:#f8fbfc}
-.tour-inner-right h3 {margin:0; color:#ff8f00}
+.tour-inner-right h3 {margin:0}
 .tour-inner-list {padding:4px 0 0 0}
 .tour-inner-list-item {padding:7px 20px; position:relative; margin:0 -20px}
 .tour-inner-list-item.active {background:#fff464}
