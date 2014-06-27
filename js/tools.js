@@ -231,8 +231,8 @@ var sliderTimer     = null;
             e.preventDefault();
         });
 
-        // заказ тура
-        $('.wrapper').on('click', '.tour-header a, .tour-anonce-buy a', function(e) {
+        // заказ тура или корабля
+        $('.wrapper').on('click', '.tour-header a, .tour-anonce-buy a, .ship-link a, .ship-header a', function(e) {
             $.ajax({
                 url: $(this).attr('href'),
                 dataType: 'html',
@@ -371,6 +371,50 @@ var sliderTimer     = null;
             var curIndex = $('.ship-menu ul li a').index($(this));
             $.scrollTo($('.ship').eq(curIndex), {offset: {'top': -150}, duration: 500});
             e.preventDefault();
+        });
+
+        // горячие туры
+        $('.hot-item:nth-child(3n+1)').addClass('hot-item-left');
+        $(window).load(function() {
+            $('.hot').each(function() {
+                var curBlock = $(this);
+                curBlock.find('.hot-item').css({'min-height': 0});
+                curBlock.find('.hot-item:nth-child(3n)').each(function() {
+                    var curItem   = $(this);
+                    var curIndex  = curBlock.find('.hot-item').index(curItem);
+                    var prevItem  = curBlock.find('.hot-item').eq(curIndex - 1);
+                    var firstItem = curBlock.find('.hot-item').eq(curIndex - 2);
+
+                    var curHeight = curItem.find('.hot-item-inner').height();
+
+                    if (prevItem.find('.hot-item-inner').height() > curHeight) {
+                        curHeight = prevItem.find('.hot-item-inner').height();
+                    }
+
+                    if (firstItem.find('.hot-item-inner').height() > curHeight) {
+                        curHeight = firstItem.find('.hot-item-inner').height();
+                    }
+
+                    curItem.find('.hot-item-inner').css({'min-height': curHeight});
+                    prevItem.find('.hot-item-inner').css({'min-height': curHeight});
+                    firstItem.find('.hot-item-inner').css({'min-height': curHeight});
+                });
+
+                if (curBlock.find('.hot-item').length % 3 == 2) {
+                    var curItem   = curBlock.find('.hot-item:last');
+                    var curIndex  = curBlock.find('.hot-item').index(curItem);
+                    var prevItem  = curBlock.find('.hot-item').eq(curIndex - 1);
+
+                    var curHeight = curItem.find('.hot-item-inner').height();
+
+                    if (prevItem.find('.hot-item-inner').height() > curHeight) {
+                        curHeight = prevItem.find('.hot-item-inner').height();
+                    }
+
+                    curItem.find('.hot-item-inner').css({'min-height': curHeight});
+                    prevItem.find('.hot-item-inner').css({'min-height': curHeight});
+                }
+            });
         });
 
     });

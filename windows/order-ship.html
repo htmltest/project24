@@ -1,0 +1,41 @@
+<div class="content content-order-ship">
+    <h1>Заказ корабля</h1>
+
+    <div class="order-descr">
+        <div class="order-descr-title">Теплоход «Авенго»</div>
+    </div>
+
+    <form action="windows/success.html" method="post">
+        <div class="window-form-row">
+            <div class="form-label">Ваше имя<span>*</span></div>
+            <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">Ваш телефон<span>*</span></div>
+            <div class="form-input"><input type="text" name="phone" value="" class="required" /></div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">На какую дату</div>
+            <div class="form-input"><input type="text" name="date" value="" /></div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">На какое время</div>
+            <div class="form-input"><input type="text" name="time" value="" /><div class="form-hint">Например: с 10 до 12 утра</div></div>
+        </div>
+        <div class="window-form-row">
+            <div class="form-label">Какое мероприятие планируете проводить на&nbsp;корабле?</div>
+            <div class="form-input"><textarea name="text" rows="5" cols="10"></textarea></div>
+        </div>
+        <div class="form-submit">
+            <input type="submit" value="Отправить" />
+            <div class="form-descr"><span>*</span> — поля, обязательные для заполнения</div>
+        </div>
+    </form>
+    <div class="loading">
+        <div class="loading-bg"></div>
+        <div class="loading-inner">
+            <div class="loading-img"></div>
+            <div class="loading-text">Отправка данных</div>
+        </div>
+    </div>
+</div>

@@ -67,17 +67,22 @@ header {height:241px; position:relative}
 .main-info-country {padding:1px 10px 0 10px}
 .main-info-country:first-child {padding-top:0}
 .main-info-country-title {font-weight:bold; font-size:18px; padding:5px 0 0 0}
+.main-info-country-title img {vertical-align:middle; border:1px solid #ccc; position:relative; top:-2px; margin:0 2px 0 0}
 .main-info-list {padding:12px 0 0 0}
+.hot-item .main-info-list {padding:3px 0 0 0}
 .main-info-item {display:block; text-decoration:none; border-top:1px solid #fff; padding:7px 0 4px 20px; background:#f8fbfc; margin:0 -20px}
 .main-info-item:first-child {border-top:none}
 .main-info-item:hover {background:#fff464}
+.hot-item .main-info-item {background:none}
 .main-info-item-title span {text-decoration:underline}
+.hot-item  .main-info-item:hover .main-info-item-title span {text-decoration:none}
 .main-info-item-title img {vertical-align:middle}
 .main-info-item-title span+img {margin-left:6px}
 .main-info-item .tour-anonce-params {margin-left:-13px; margin-right:-10px; padding-top:1px}
 .main-info-item .tour-anonce-date {margin:0 0 0 13px; font-weight:normal; color:#000}
 .main-info-item .tour-anonce-days {margin:0 0 0 13px; font-weight:normal; color:#000}
 .main-info-item .tour-anonce-price {margin:0 0 0 13px; font-size:12px; font-weight:normal}
+.hot-item .main-info-item .tour-anonce-price {font-weight:bold}
 
 .main-news-title {padding:8px 10px 0 10px}
 .main-news-anonce {padding:0 10px}
@@ -248,7 +253,11 @@ header {height:241px; position:relative}
 .news-detail-date {font-size:18px; color:#ff8f00; margin:-4px 0 -11px 0}
 .news-detail-likes {position:relative; margin:-20px 0 29px -6px}
 
-.news-item {margin:27px 0}
+.news-item {margin:27px 0; width:100%}
+.news-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.news-item-photo {float:left; width:120px; line-height:0; position:relative}
+.news-item-photo img {position:relative; -moz-border-radius:60px; -webkit-border-radius:60px; border-radius:60px; behavior:url(./js/PIE.htc)}
+.news-item-photo+.news-item-content {margin:0 0 0 140px; padding:9px 0 0 0}
 .news-item-date {color:#ff8f00}
 .news-item-name {font-weight:bold; font-size:18px; margin-top:-2px}
 .news-item-anonce {padding:11px 0 0 0}
@@ -270,6 +279,10 @@ header {height:241px; position:relative}
 .visa-block-price {font-size:18px; line-height:24px; font-weight:bold}
 .visa-block-price span {color:#dd5400}
 .visa-block-photo {line-height:0; width:100%; position:relative; overflow:hidden}
+.visa-block-order {padding:20px 0 26px 0}
+.visa-block-order a {display:block; position:relative; height:36px; text-decoration:none; text-align:center; color:#3b290f; font-weight:bold; font-size:14px; line-height:36px; text-align:center; text-shadow:0 1px 0 #ffbf00; background:#ffbd00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffbd00) to(#ff8d00)); background:-webkit-linear-gradient(#ffbd00, #ff8d00); background:-moz-linear-gradient(#ffbd00, #ff8d00); background:-ms-linear-gradient(#ffbd00, #ff8d00); background:-o-linear-gradient(#ffbd00, #ff8d00); background:linear-gradient(#ffbd00, #ff8d00); -pie-background:linear-gradient(#ffbd00, #ff8d00); -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; behavior:url(./js/PIE.htc)}
+.visa-block-order a:hover {text-shadow:0 1px 0 #ff9e00; background:#ffa200; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffa200) to(#ff5f00)); background:-webkit-linear-gradient(#ffa200, #ff5f00); background:-moz-linear-gradient(#ffa200, #ff5f00); background:-ms-linear-gradient(#ffa200, #ff5f00); background:-o-linear-gradient(#ffa200, #ff5f00); background:linear-gradient(#ffa200, #ff5f00); -pie-background:linear-gradient(#ffa200, #ff5f00)}
+.visa-block-order a:active {text-shadow:0 1px 0 #ffb300; background:#ff5e00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ff5e00) to(#ffa000)); background:-webkit-linear-gradient(#ff5e00, #ffa000); background:-moz-linear-gradient(#ff5e00, #ffa000); background:-ms-linear-gradient(#ff5e00, #ffa000); background:-o-linear-gradient(#ff5e00, #ffa000); background:linear-gradient(#ff5e00, #ffa000); -pie-background:linear-gradient(#ff5e00, #ffa000)}
 
 .visa-content {float:left; width:542px}
 .visa-content blockquote {font-size:14px; line-height:18px}
@@ -278,7 +291,7 @@ header {height:241px; position:relative}
 .gallery {position:relative; margin:0 -30px -30px -30px; width:960px; overflow:hidden}
 .gallery-big {position:relative; height:442px; width:100%; line-height:0; overflow:hidden}
 .gallery-big img {position:absolute; width:100%}
-.gallery-preview {padding:10px 0 0 20px; line-height:0; width:940px}
+.gallery-preview {padding:10px 0 0 30px; line-height:0; width:940px}
 .gallery-preview:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .gallery-preview a {float:left; width:108px; height:80px; position:relative; overflow:hidden; margin:0 10px 10px 0}
 .gallery-preview a.active {outline:5px solid #ff8f00}
@@ -294,6 +307,7 @@ header {height:241px; position:relative}
 .tour-header {position:absolute; left:30px; top:29px; background:#fff; overflow:hidden; padding:0 0 0 30px; height:106px; -moz-border-radius:0 4px 4px 0; -webkit-border-radius:0 4px 4px 0; border-radius:0 4px 4px 0; behavior:url(./js/PIE.htc)}
 .tour-header-content {float:left; padding:17px 30px 0 0}
 .tour-header-content h1 {margin:0}
+.tour-header-content h1 img {vertical-align:middle}
 .tour-header a {float:left; padding:33px 40px 0 50px; position:relative; height:73px; text-decoration:none; color:#3b290f; font-weight:bold; font-size:24px; line-height:18px; text-align:center; text-shadow:0 1px 0 #ffbf00; background:#ffbd00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffbd00) to(#ff8d00)); background:-webkit-linear-gradient(#ffbd00, #ff8d00); background:-moz-linear-gradient(#ffbd00, #ff8d00); background:-ms-linear-gradient(#ffbd00, #ff8d00); background:-o-linear-gradient(#ffbd00, #ff8d00); background:linear-gradient(#ffbd00, #ff8d00); -pie-background:linear-gradient(#ffbd00, #ff8d00); -moz-border-radius:0 4px 4px 0; -webkit-border-radius:0 4px 4px 0; border-radius:0 4px 4px 0; behavior:url(./js/PIE.htc)}
 .tour-header a:hover {text-shadow:0 1px 0 #ff9e00; background:#ffa200; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffa200) to(#ff5f00)); background:-webkit-linear-gradient(#ffa200, #ff5f00); background:-moz-linear-gradient(#ffa200, #ff5f00); background:-ms-linear-gradient(#ffa200, #ff5f00); background:-o-linear-gradient(#ffa200, #ff5f00); background:linear-gradient(#ffa200, #ff5f00); -pie-background:linear-gradient(#ffa200, #ff5f00)}
 .tour-header a:active {text-shadow:0 1px 0 #ffb300; background:#ff5e00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ff5e00) to(#ffa000)); background:-webkit-linear-gradient(#ff5e00, #ffa000); background:-moz-linear-gradient(#ff5e00, #ffa000); background:-ms-linear-gradient(#ff5e00, #ffa000); background:-o-linear-gradient(#ff5e00, #ffa000); background:linear-gradient(#ff5e00, #ffa000); -pie-background:linear-gradient(#ff5e00, #ffa000)}
@@ -302,11 +316,13 @@ header {height:241px; position:relative}
 .tour-header .tour-anonce-date {margin:0; font-size:18px; padding:0 0 0 27px; background:url(../images/tour-anonce-date-2.png) no-repeat left center}
 .tour-header .tour-anonce-days {margin:0 0 0 20px; font-size:18px; padding:0 0 0 27px; background:url(../images/tour-anonce-days-2.png) no-repeat left center}
 .tour-header .tour-anonce-price {margin:0 0 0 20px; font-size:18px; padding:0 0 0 27px; background:url(../images/tour-anonce-price-2.png) no-repeat left center}
+.tour-header .tour-anonce-price:first-child {margin:0}
 
 .form-descr {float:left; font-size:12px; padding:10px 0 0 0}
 .form-descr span {color:#f00; font-weight:bold}
 
-.partners {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:relative; margin:-10px -26px}
+.partners-title {font-size:24px; line-height:24px; text-align:center; font-weight:bold; border-bottom:1px solid #e6e6e6; margin:3px -10px 0 -10px; padding:0 0 33px 0}
+.partners {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:relative; margin:22px -26px 6px -26px}
 .partners img {vertical-align:middle; margin:10px 26px}
 
 .place-map {position:relative}
@@ -362,9 +378,34 @@ header {height:241px; position:relative}
 
 .page-404-title {font-size:180px; font-weight:bold; line-height:180px; text-align:center; color:#fff; padding:17px 0 0 0}
 .page-404-subtitle {font-size:24px; line-height:24px; text-align:center; color:#fff; padding:7px 0 0 0}
-.page-404-text {text-align:center; line-height:21px; color:#fff; padding:13px 0 0 0}
+.page-404-text {text-align:center; line-height:21px; color:#fff; padding:13px 0 38px 0}
 .page-404-text a {color:#fff}
-.page-404-arrow {width:195px; height:86px; padding:22px 0 0 0; background:url(../images/page-404-arrow.png); text-align:center; color:#fff; font-style:italic; margin:2px 0 4px 676px}
+
+.countries {padding:1px 0 26px 0}
+.countries-block {padding:39px 0 0 0}
+.countries-block:first-child {padding:0}
+.countries-block-title {font-weight:bold; font-size:24px; line-height:24px; padding:0 0 17px 0}
+.countries-block-cols {width:100%; color:#808080}
+.countries-block-cols:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.countries-block-col {float:left; width:180px; margin:0 0 0 60px}
+.countries-block-col:first-child {margin:0}
+.countries-item {position:relative; padding:9px 0 0 30px}
+.countries-item img {position:absolute; left:0; top:12px; display:block; border:1px solid #ccc}
+
+.country {padding:73px 0 0 0}
+.country-tours h2 {margin:0 0 28px 0}
+
+.content-hots {padding:0 20px; width:920px}
+.hot {width:940px}
+.hot:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.hot-item {float:left; width:307px; padding:10px 0}
+.hot-item+.hot-item+.hot-item+.hot-item {border-top:1px solid #e6e6e6}
+.hot-item-inner {border-left:1px solid #e6e6e6; padding:18px 30px 18px 29px}
+.hot-item:first-child .hot-item-inner,
+.hot-item-left .hot-item-inner {border-left:0; padding-left:10px}
+
+.content-hots h2 {text-align:center; margin:0; padding:20px 0 0 0}
+.content-hots p {text-align:center; margin:0; padding:8px 0 28px 0; border-bottom:1px solid #e6e6e6}
 
 .footer-menu {width:960px; margin:0 auto; padding:27px 0 14px 0; list-style:none; font-size:0; line-height:0; letter-spacing:-1px}
 .footer-menu li {display:inline-block; width:160px; vertical-align:top; text-align:center; margin:0; padding:0 0 28px 0}
@@ -437,11 +478,17 @@ footer a {color:#fff}
 .success h1 {margin:0; text-align:center}
 
 .order-descr {position:relative; margin:-6px -20px -23px -20px; background:#f8fbfc; padding:16px 20px 0 20px}
+.content-order-ship .order-descr {padding-bottom:20px}
 .order-descr-title {font-weight:bold; font-size:18px}
 .order-descr .tour-anonce-params {margin:6px 0 0 -20px; padding:0}
 .order-descr .tour-anonce-date {font-size:14px}
 .order-descr .tour-anonce-days {font-size:14px}
 .order-descr-text {padding:15px 0 19px 0}
+
+.content-order-ship .window-form-row .form-label {width:200px}
+.content-order-ship .window-form-row .form-input input {width:278px}
+.content-order-ship .window-form-row .form-input textarea {width:278px}
+
 
 /*!
 Chosen, a Select Box Enhancer for jQuery and Prototype

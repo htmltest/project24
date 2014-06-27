@@ -17,6 +17,7 @@ a {text-decoration:none}
 .footer-links,
 .content form,
 .news-detail-likes,
-.window {display:none}
+.window,
+.visa-block-order {display:none}
 
 .content-tabs ul li.active {display:block}
