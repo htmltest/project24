@@ -334,25 +334,6 @@ var sliderTimer     = null;
             e.preventDefault();
         });
 
-        $('.tour-inner-list').on('click', '.tour-inner-list-item-title a', function(e) {
-            var curBlock = $(this).parent().parent();
-
-            if (curBlock.hasClass('active')) {
-                curBlock.removeClass('active');
-            } else {
-                $('.tour-inner-list-item.active').removeClass('active');
-                curBlock.addClass('active');
-            }
-
-            e.preventDefault();
-        });
-
-        $(document).click(function(e) {
-            if ($(e.target).parents().filter('.tour-inner-list').length == 0) {
-                $('.tour-inner-list-item.active').removeClass('active');
-            }
-        });
-
         // полоса "наверх"
         $(document).mousemove(function(e) {
             if (e.pageX > $(window).width() - 90) {

@@ -356,25 +356,29 @@ header {height:241px; position:relative}
 .tour-inner {width:100%; padding:42px 0 0 0}
 .tour-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .tour-inner blockquote {font-size:14px}
-.tour-inner-left {float:left; width:580px}
-.tour-inner-right {float:right; width:260px; padding:0 20px 36px 20px; background:#f8fbfc}
-.tour-inner-right h3 {margin:0}
-.tour-inner-list {padding:4px 0 0 0}
-.tour-inner-list-item {padding:7px 20px; position:relative; margin:0 -20px}
-.tour-inner-list-item.active {background:#fff464}
-.tour-inner-list-item-title {font-weight:bold}
+.tour-variants {padding:16px 30px 36px 30px; background:#f8fbfc; margin:28px -30px -30px -30px}
+.tour-inner-list-headers {width:100%; border-bottom:1px solid #e0e7ea; font-size:12px; line-height:18px; color:#949696; padding:11px 0 9px 0}
+.tour-inner-list-headers:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tour-inner-list-header-1 {float:left; width:300px}
+.tour-inner-list-header-2 {float:left; width:153px}
+.tour-inner-list-header-3 {float:left; width:146px}
+.tour-inner-list-header-4 {float:left; width:141px}
+.tour-inner-list-item {position:relative; width:100%; border-top:1px solid #e0e7ea; padding:16px 0 11px 0}
+.tour-inner-list-item:first-child {border-top:none}
+.tour-inner-list-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tour-inner-list-item-title {font-weight:bold; float:left; width:290px; padding:0 10px 0 0; text-transform:uppercase}
 .tour-inner-list-item-title a {text-decoration:none; background:url(../images/dots-1.png) repeat-x left bottom}
 .tour-inner-list-item-title a:hover {background:none}
-.tour-inner-list-item-param span {text-decoration:line-through}
-.tour-inner-list-item-param strong {color:#dd5400}
+.tour-inner-list-item-type {float:left; width:143px; padding:0 10px 0 0}
+.tour-inner-list-item-priceold {float:left; width:136px; padding:0 10px 0 0; text-decoration:line-through}
+.tour-inner-list-item-price {float:left; width:131px; padding:0 10px 0 0; font-weight:bold; color:#dd5400}
+.tour-inner-list-btn {float:left; width:160px; margin-top:-7px}
+.tour-inner-list-btn a {display:block; position:relative; height:31px; text-decoration:none; color:#3b290f; font-weight:bold; line-height:31px; text-align:center; text-shadow:0 1px 0 rgba(255, 255, 255, .35); background:#ffbd00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffbd00) to(#ff8d00)); background:-webkit-linear-gradient(#ffbd00, #ff8d00); background:-moz-linear-gradient(#ffbd00, #ff8d00); background:-ms-linear-gradient(#ffbd00, #ff8d00); background:-o-linear-gradient(#ffbd00, #ff8d00); background:linear-gradient(#ffbd00, #ff8d00); -pie-background:linear-gradient(#ffbd00, #ff8d00); -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; behavior:url(./js/PIE.htc)}
+.tour-inner-list-btn a:hover {text-shadow:0 1px 0 rgba(255, 255, 255, .35); background:#ffa200; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffa200) to(#ff5f00)); background:-webkit-linear-gradient(#ffa200, #ff5f00); background:-moz-linear-gradient(#ffa200, #ff5f00); background:-ms-linear-gradient(#ffa200, #ff5f00); background:-o-linear-gradient(#ffa200, #ff5f00); background:linear-gradient(#ffa200, #ff5f00); -pie-background:linear-gradient(#ffa200, #ff5f00)}
+.tour-inner-list-btn a:active {text-shadow:0 1px 0 rgba(255, 255, 255, .35); background:#ff5e00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ff5e00) to(#ffa000)); background:-webkit-linear-gradient(#ff5e00, #ffa000); background:-moz-linear-gradient(#ff5e00, #ffa000); background:-ms-linear-gradient(#ff5e00, #ffa000); background:-o-linear-gradient(#ff5e00, #ffa000); background:linear-gradient(#ff5e00, #ffa000); -pie-background:linear-gradient(#ff5e00, #ffa000)}
 .tour-inner-list-more {text-align:center; font-weight:bold; padding:29px 0 0 0}
 .tour-inner-list-more a {text-decoration:none; background:url(../images/dots-1.png) repeat-x left bottom}
 .tour-inner-list-more a:hover {background:none}
-.tour-inner-list-btn {display:none; position:absolute; right:100%; top:0; height:100%; padding:0 10px; background:#fff464; white-space:nowrap}
-.tour-inner-list-item.active .tour-inner-list-btn {display:block}
-.tour-inner-list-btn a {display:inline-block; margin-top:7px; vertical-align:top; padding:0 45px; position:relative; height:36px; text-decoration:none; color:#3b290f; font-weight:bold; line-height:36px; text-align:center; text-shadow:0 1px 0 #ffbf00; background:#ffbd00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffbd00) to(#ff8d00)); background:-webkit-linear-gradient(#ffbd00, #ff8d00); background:-moz-linear-gradient(#ffbd00, #ff8d00); background:-ms-linear-gradient(#ffbd00, #ff8d00); background:-o-linear-gradient(#ffbd00, #ff8d00); background:linear-gradient(#ffbd00, #ff8d00); -pie-background:linear-gradient(#ffbd00, #ff8d00); -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; behavior:url(./js/PIE.htc)}
-.tour-inner-list-btn a:hover {text-shadow:0 1px 0 #ff9e00; background:#ffa200; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffa200) to(#ff5f00)); background:-webkit-linear-gradient(#ffa200, #ff5f00); background:-moz-linear-gradient(#ffa200, #ff5f00); background:-ms-linear-gradient(#ffa200, #ff5f00); background:-o-linear-gradient(#ffa200, #ff5f00); background:linear-gradient(#ffa200, #ff5f00); -pie-background:linear-gradient(#ffa200, #ff5f00)}
-.tour-inner-list-btn a:active {text-shadow:0 1px 0 #ffb300; background:#ff5e00; background:-webkit-gradient(linear, 0 0, 0 100%, from(#ff5e00) to(#ffa000)); background:-webkit-linear-gradient(#ff5e00, #ffa000); background:-moz-linear-gradient(#ff5e00, #ffa000); background:-ms-linear-gradient(#ff5e00, #ffa000); background:-o-linear-gradient(#ff5e00, #ffa000); background:linear-gradient(#ff5e00, #ffa000); -pie-background:linear-gradient(#ff5e00, #ffa000)}
 
 .page-404-title {font-size:180px; font-weight:bold; line-height:180px; text-align:center; color:#fff; padding:17px 0 0 0}
 .page-404-subtitle {font-size:24px; line-height:24px; text-align:center; color:#fff; padding:7px 0 0 0}
